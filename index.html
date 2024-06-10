@@ -1,0 +1,15 @@
+---
+- name: Copy HTML index file and start service
+  hosts: 10.128.0.3
+  become: yes
+
+  tasks:
+    - name: Copy HTML index file
+      copy:
+        src: /var/lib/jenkins/workspace/ansible-apache/index.html
+        dest: /var/www/html/index.html
+
+    - name: Restart the service
+      service:
+        name: httpd
+        state: restarted
