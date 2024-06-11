@@ -4,10 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Ansible Automation</title>
+    <style>
+        /* Styling for the heading */
+        h1 {
+            color: blue; /* Text color */
+            font-weight: bold; /* Bold font */
+        }
+
+        /* Styling for the marquee */
+        .marquee {
+            width: 100%; /* Full width */
+            white-space: nowrap; /* Don't wrap text */
+            overflow: hidden; /* Hide overflow */
+            background-image: url('https://giphy.com/clips/therokuchannel-season-6-episode-4-the-great-american-baking-show-MtGY4FcgMmgzFXSXca'); /* Background GIF */
+        }
+
+        .marquee span {
+            display: inline-block; /* Make span inline */
+            padding-left: 100%; /* Initial position */
+            animation: marquee 15s linear infinite; /* Animation */
+        }
+
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+    </style>
 </head>
 <body>
-    <h1 style="color: blue; font-weight: bold;">
-        Welcome to <span style="color: red; font-weight: bold; text-decoration: blink;">Ansible</span> Automation
-    </h1>
+    <!-- Heading -->
+    <h1>Welcome to <span style="color: red;">Ansible</span> Automation</h1>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <span> Welcome to Ansible Automation! </span>
+    </div>
 </body>
 </html>
